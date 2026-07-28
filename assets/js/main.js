@@ -1,7 +1,7 @@
 /**
- * Naves Studios — bootstrap da landing.
- * Único arquivo que conhece o DOM concreto: seleciona elementos
- * e injeta cada um na classe responsável.
+ * Naves Studios — landing page bootstrap.
+ * The only file that knows the concrete DOM: it selects elements
+ * and injects each one into the class responsible for it.
  */
 (function () {
   'use strict';
@@ -9,35 +9,35 @@
   document.addEventListener('DOMContentLoaded', function () {
     var N = window.Naves;
 
-    new N.Preloader(document.querySelector('.preloader')).iniciar();
-    new N.HeaderRolagem(document.querySelector('header.topo')).iniciar();
+    new N.Preloader(document.querySelector('.preloader')).start();
+    new N.HeaderScroll(document.querySelector('header.topbar')).start();
 
     new N.RevealOnScroll().observe(
-      document.querySelectorAll('.reveal-alvo, .decola, .secao-head, .passo')
+      document.querySelectorAll('.reveal-target, .liftoff, .section-head, .step')
     );
 
-    new N.ContadorAnimado().bind(document.querySelectorAll('[data-valor]'));
+    new N.AnimatedCounter().bind(document.querySelectorAll('[data-value]'));
 
-    new N.TrajetoriaScroll(
-      document.querySelector('.trajetoria .linha path'),
-      document.querySelector('.trajetoria')
-    ).iniciar();
+    new N.ScrollTrajectory(
+      document.querySelector('.trajectory .line path'),
+      document.querySelector('.trajectory')
+    ).start();
 
-    new N.CartaoTilt().bind(document.querySelectorAll('.card'));
-    new N.BotaoMagnetico().bind(document.querySelectorAll('.magnetico'));
+    new N.CardTilt().bind(document.querySelectorAll('.card'));
+    new N.MagneticButton().bind(document.querySelectorAll('.magnetic'));
 
-    var contadorVitrine = new N.ContadorVitrine(
-      document.querySelector('[data-vitrine-indice]'),
-      document.querySelector('[data-vitrine-total]'),
-      document.querySelector('[data-vitrine-barra]')
+    var showcaseCounter = new N.ShowcaseCounter(
+      document.querySelector('[data-showcase-index]'),
+      document.querySelector('[data-showcase-total]'),
+      document.querySelector('[data-showcase-bar]')
     );
-    new N.VitrineScroll(document.querySelector('[data-vitrine]'))
-      .assinar(contadorVitrine.atualizar.bind(contadorVitrine))
-      .iniciar();
+    new N.ShowcaseScroll(document.querySelector('[data-showcase]'))
+      .subscribe(showcaseCounter.update.bind(showcaseCounter))
+      .start();
 
     new N.Slider(
-      document.querySelector('.slider .faixa'),
-      document.querySelector('.slider-controles')
-    ).iniciar();
+      document.querySelector('.slider .rail'),
+      document.querySelector('.slider-controls')
+    ).start();
   });
 })();
