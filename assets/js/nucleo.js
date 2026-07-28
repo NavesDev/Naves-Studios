@@ -59,31 +59,6 @@
     });
   };
 
-  /**
-   * Preenche os links de contato com o e-mail vindo da configuração.
-   * O endereço não fica no HTML: vem do .env via scripts/gerar-config.js.
-   * Sem configuração, o link continua inerte (sem href) em vez de apontar
-   * para um endereço errado.
-   *
-   * @param {{contatoEmail?: string, contatoAssunto?: string}} [config]
-   */
-  function LinkContato(config) {
-    this.config = config || null;
-  }
-
-  /** @param {ArrayLike<HTMLAnchorElement>} links */
-  LinkContato.prototype.bind = function (links) {
-    var config = this.config;
-    if (!config || !config.contatoEmail) return;
-    var assunto = config.contatoAssunto
-      ? '?subject=' + encodeURIComponent(config.contatoAssunto)
-      : '';
-    Array.prototype.forEach.call(links, function (link) {
-      link.setAttribute('href', 'mailto:' + config.contatoEmail + assunto);
-      link.removeAttribute('aria-disabled');
-    });
-  };
-
   /** true quando o usuário pediu menos movimento no sistema. */
   function prefereMenosMovimento() {
     return (
@@ -93,6 +68,5 @@
   }
 
   window.Naves.RevealOnScroll = RevealOnScroll;
-  window.Naves.LinkContato = LinkContato;
   window.Naves.prefereMenosMovimento = prefereMenosMovimento;
 })();

@@ -9,10 +9,6 @@
   document.addEventListener('DOMContentLoaded', function () {
     var N = window.Naves;
 
-    new N.LinkContato(N.config).bind(
-      document.querySelectorAll('[data-contato]')
-    );
-
     new N.Preloader(document.querySelector('.preloader')).iniciar();
     new N.HeaderRolagem(document.querySelector('header.topo')).iniciar();
 

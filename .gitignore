@@ -1,6 +1,3 @@
-# Segredos e configuração local
+# Configuração local e segredos (caso apareçam no futuro)
 .env
 .env.local
-
-# Gerado a partir do .env por scripts/gerar-config.js
-assets/js/config.js

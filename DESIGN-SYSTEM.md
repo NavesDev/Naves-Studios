@@ -121,9 +121,3 @@ Anima se desenhando no preloader.
 - JS organizado por responsabilidade: `nucleo.js` (compartilhado), `animacoes.js`
   (uma classe por efeito), `main.js` (único que conhece o DOM concreto e liga as peças).
 - Nada de imagem de banco: ilustrações são SVG próprio.
-
-## Configuração
-
-Dados de contato não ficam no código. Ver [`.env.exemplo`](.env.exemplo):
-copie para `.env`, preencha, e rode `node scripts/gerar-config.js` para gerar
-`assets/js/config.js`. `.env` e o arquivo gerado ficam fora do versionamento.
