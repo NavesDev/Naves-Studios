@@ -1,0 +1,27 @@
+/* ============ HEADER ============ */
+header.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:var(--blue);
+  transition:box-shadow var(--dur-medium);
+}
+header.topbar.scrolled{box-shadow:0 6px 24px rgba(26,43,58,.18)}
+.topbar .wrap{display:flex;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px}
+.topbar .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.topbar .brand svg{width:30px;height:30px}
+.topbar .brand strong{color:var(--white);font-weight:800;letter-spacing:.04em;font-size:1.02rem}
+.topbar .brand strong em{font-style:normal;color:var(--light)}
+nav.menu{margin-left:auto;display:flex;gap:26px;align-items:center}
+nav.menu a{
+  color:var(--white);text-decoration:none;font-size:.88rem;font-weight:600;
+  position:relative;padding:4px 0;
+}
+nav.menu a::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;
+  background:var(--light);transform:scaleX(0);transform-origin:right;
+  transition:transform var(--dur-medium) var(--ease);
+}
+nav.menu a:hover::after{transform:scaleX(1);transform-origin:left}
+nav.menu a.btn{color:var(--blue)}
+nav.menu a.btn::after{display:none}
+.topbar .btn{padding:10px 22px}
+@media (max-width:820px){nav.menu a:not(.btn){display:none}}

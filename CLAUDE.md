@@ -5,8 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 Static landing page for Naves Studios (personal software-dev studio). No build step, no
-package manager, no dependencies. Three files do all the work: `index.html`,
-`assets/css/style.css`, `assets/js/*.js`.
+package manager, no dependencies. `index.html`, `assets/css/*.css` (one file per
+component/concern), and `assets/js/*.js` do all the work.
 
 ## Commands
 
@@ -62,7 +62,7 @@ transition) and the page must remain readable with JS disabled.
 ## Design system
 
 [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md) is the style reference; the `:root` block in
-[style.css](assets/css/style.css:5) is the source of truth for values. Colors,
+[base.css](assets/css/base.css:5) is the source of truth for values. Colors,
 durations, radius, and widths are all tokens — never hardcode a hex, duration, or
 breakpoint value that a token already covers, and add a new token rather than a one-off
 literal. Same for JS: timings and thresholds are named constructor parameters with

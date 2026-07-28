@@ -1,0 +1,21 @@
+/* ============ BUTTONS ============ */
+.btn{
+  font-family:var(--font);font-size:.9rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;text-decoration:none;display:inline-block;
+  padding:15px 32px;border-radius:var(--radius);border:none;cursor:pointer;
+  transition:transform var(--dur-micro) var(--ease), background var(--dur-micro), color var(--dur-micro), box-shadow var(--dur-micro);
+}
+.btn:focus-visible{outline:3px solid var(--light);outline-offset:3px}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-white{background:var(--white);color:var(--blue)}
+.btn-white:hover{box-shadow:0 8px 20px rgba(11,40,64,.25)}
+.btn-blue{background:var(--blue);color:var(--white)}
+.btn-blue:hover{background:var(--blue-strong)}
+.btn-outline{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn-outline:hover{background:var(--ink);color:var(--white)}
+.btn-square{
+  width:44px;height:44px;padding:0;display:grid;place-items:center;
+  font-size:1.3rem;font-weight:600;text-transform:none;letter-spacing:0;
+}
+.magnetic{will-change:transform}

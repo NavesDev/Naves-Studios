@@ -1,0 +1,60 @@
+/* ============================================================
+   Naves Studios — Base: tokens, reset, generic section helpers
+   Design system v0.3 tokens
+   ============================================================ */
+:root{
+  --blue:       #2495E8;
+  --blue-strong:#1B7DC7;
+  --light:      #BEE3FB;
+  --surface:    #F5FAFE;
+  --ink:        #1A2B3A;
+  --white:      #FFFFFF;
+  --text-muted: #5A7184;
+  --border:     #E3EEF7;
+
+  --font: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --t-display: clamp(2.6rem, 6vw, 4.4rem);
+  --t-title:   clamp(1.7rem, 3.4vw, 2.5rem);
+  --t-sub:     1.15rem;
+  --t-body:    1rem;
+  --t-caption: .8rem;
+
+  --dur-micro:  .18s;
+  --dur-medium: .5s;
+  --dur-slow:   .9s;
+  --ease: cubic-bezier(.22,1,.36,1);
+
+  --radius: 8px;
+  --content-width: 1080px;
+  --content-width-wide: 1320px;
+  --section-space: 88px;
+  --header-height: 58px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font);
+  background:var(--white);
+  color:var(--ink);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--content-width);margin:0 auto;padding:0 24px}
+.wrap-wide{max-width:var(--content-width-wide);margin:0 auto;padding:0 24px}
+section{padding:var(--section-space) 0}
+img,svg{max-width:100%}
+
+h2{font-size:var(--t-title);font-weight:800;letter-spacing:-.015em;margin-bottom:10px}
+.section-head{text-align:center;margin-bottom:48px}
+.eyebrow{
+  display:block;margin-bottom:8px;
+  font-size:var(--t-caption);font-weight:700;color:var(--blue);
+  text-transform:uppercase;letter-spacing:.22em;
+}
+.note{color:var(--text-muted);max-width:620px;margin:0 auto}
+.squiggle{display:block;margin:10px auto 0;width:120px}
+.squiggle path{
+  stroke:var(--blue);stroke-width:3;fill:none;stroke-linecap:round;
+  stroke-dasharray:150;stroke-dashoffset:150;
+}

@@ -1,0 +1,31 @@
+/* ============ HERO ============ */
+.hero{
+  background:var(--blue);color:var(--white);overflow:hidden;
+  padding:0;margin-top:var(--header-height);
+}
+.hero .wrap{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;
+  min-height:calc(100vh - var(--header-height));padding-top:60px;padding-bottom:60px;
+}
+h1{font-size:var(--t-display);font-weight:800;line-height:1.06;letter-spacing:-.02em}
+.hero p{margin:20px 0 32px;max-width:440px;color:var(--light);font-size:var(--t-sub)}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero .btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.55)}
+.hero .btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,.1)}
+.hero-doodle{justify-self:center;width:min(320px,80vw)}
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;min-height:auto;padding-top:72px}
+  .hero-doodle{width:210px}
+}
+
+/* ============ MARQUEE ============ */
+.marquee{
+  background:var(--ink);color:var(--white);overflow:hidden;padding:18px 0;
+  white-space:nowrap;
+}
+.marquee .track{display:inline-flex;gap:0;will-change:transform}
+.marquee span{
+  display:inline-block;padding:0 28px;
+  font-weight:700;font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;
+}
+.marquee .dot{color:var(--blue);padding:0}

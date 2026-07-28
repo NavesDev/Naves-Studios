@@ -1,7 +1,7 @@
 # Naves Studios — Design System v0.3
 
 Single style reference for the landing page. The tokens live in
-[`assets/css/style.css`](assets/css/style.css) (the `:root` block) — this document
+[`assets/css/base.css`](assets/css/base.css) (the `:root` block) — this document
 explains **when** to use each one; the CSS is the source of truth for the values.
 
 Principle: flat blocks of color, heavy typography, zero gradients, and a hand-drawn
