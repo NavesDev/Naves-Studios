@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Naves Studios">
+  <!-- N contínuo com loop orbital, traço levemente à mão (v0.2) -->
+  <path d="M18 49 C17 38 17 26 18 15 M46 49 C47 38 47 26 46 15" stroke="#1A2B3A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M18 15 L28 25.5 A7 7 0 1 0 36.5 38.5 L46 49" stroke="#2495E8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

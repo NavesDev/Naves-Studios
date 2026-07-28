@@ -1,0 +1,6 @@
+# Segredos e configuração local
+.env
+.env.local
+
+# Gerado a partir do .env por scripts/gerar-config.js
+assets/js/config.js
